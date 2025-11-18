@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  /* Harzotech Brand Colors */
+  --primary-blue: #0066FF;
+  --primary-blue-dark: #0052CC;
+  --primary-blue-light: #3385FF;
+
+  --primary-orange: #FF6B00;
+  --primary-orange-dark: #E55F00;
+  --primary-orange-light: #FF8833;
+
+  /* Neutral Colors */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Brand Colors */
+  --color-primary: var(--primary-blue);
+  --color-primary-dark: var(--primary-blue-dark);
+  --color-primary-light: var(--primary-blue-light);
+  --color-secondary: var(--primary-orange);
+  --color-secondary-dark: var(--primary-orange-dark);
+  --color-secondary-light: var(--primary-orange-light);
+
+  /* Gray Scale */
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
